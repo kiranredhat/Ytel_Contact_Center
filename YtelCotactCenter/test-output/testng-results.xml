@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="85770" started-at="2019-04-18T12:08:25Z" finished-at="2019-04-18T12:09:51Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="85770" started-at="2019-04-18T12:08:25Z" finished-at="2019-04-18T12:09:51Z">
+      <class name="com.ycc.test.CloneAgentTest">
+        <test-method status="PASS" signature="veirfyCloneAgentSuccess()[pri:0, instance:com.ycc.test.CloneAgentTest@46d56d67]" name="veirfyCloneAgentSuccess" duration-ms="84995" started-at="2019-04-18T12:08:25Z" finished-at="2019-04-18T12:09:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- veirfyCloneAgentSuccess -->
+      </class> <!-- com.ycc.test.CloneAgentTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
