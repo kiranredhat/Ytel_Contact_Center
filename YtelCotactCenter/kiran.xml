@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Default suite">
-  <test verbose="2" name="Default test">
+  <test name="groupTest">
+  <groups>
+  <run>
+  <include name="kirangroup"/>
+  </run>
+  </groups>
+  </test>
+
     <classes>
-      <class name="com.ycc.test.LoginTest"/>
+      <class name="com.ycc.test.LoginPage"/>
+      <class name="com.ycc.test.CloneAgentTest"/>
+      <class name="com.ycc.test.CampaignListTest"/>     
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->

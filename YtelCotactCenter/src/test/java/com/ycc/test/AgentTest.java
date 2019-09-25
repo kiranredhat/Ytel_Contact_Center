@@ -14,8 +14,11 @@ public void verifyAgentTest() throws IOException, InterruptedException
 {
 	LoginPage lp = new LoginPage();
 	lp.successLogin()
-		.navigateToAgentPage();
+	.isDashboardPageLoaded()
+		.navigateToAgentPage()
+			.verifyTable();
+				
 }
-	
+
 
 }

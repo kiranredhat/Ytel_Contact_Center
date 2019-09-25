@@ -2,6 +2,7 @@ package com.ycc.common;
 
 import java.net.URL;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -33,8 +34,9 @@ public class TestListner implements IInvokedMethodListener {
 				WebDriverFactory.setdr(new ChromeDriver());
 				WebDriverFactory.getdr().manage().deleteAllCookies();
 				WebDriverFactory.getdr().get("https://x5admin.ytel.com/Account/login");
-				WebDriverFactory.getdr().manage().window().maximize();
-				
+//				WebDriverFactory.getdr().manage().window().maximize();
+				Dimension d=new Dimension(480,620);
+				WebDriverFactory.getdr().manage().window().setSize(d);
 //				DesiredCapabilities DC = new DesiredCapabilities();
 //				 DC.setBrowserName("chrome");
 //				 DC.setVersion("72");

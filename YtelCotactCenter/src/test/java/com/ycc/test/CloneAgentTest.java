@@ -14,6 +14,6 @@ public void veirfyCloneAgentSuccess() throws InterruptedException, AWTException,
 {
 	LoginPage lp = new LoginPage();
 	lp.successLogin().navigateToAgentPage().navigateToCloneAgentPage().cloneAgentSuccess();
-}
 	
+}
 }

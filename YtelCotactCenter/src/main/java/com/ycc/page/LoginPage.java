@@ -11,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ycc.common.WebDriverFactory;
@@ -19,9 +20,15 @@ import javafx.scene.control.Alert;
 
 public class LoginPage {
 @FindBy (xpath="//input[@class='form-control']") WebElement elmUsername;
+//@FindBy (xpath="//div[@class='input-group']//div//input[@id='username']") WebElement elmUsername;
+
+	
+
 @FindBy (xpath="//input[@type='password']") WebElement elmPassword;
 @FindBy (xpath="//input[@type='checkbox']") WebElement elmCheckbox;
-@FindBy (xpath="//button[@type='submit']") WebElement elmSubmit;
+//@FindBy (xpath="//button[@type='submit']") WebElement elmSubmit;
+//div[@class='form-group']//button[@id='login']
+@FindBy (xpath="//div[@class='form-group']//button[@id='login']") WebElement elmSubmit;
 
 //@FindBy (xpath="//input[@id='txtUsername' and @id='txtUsername']") WebElement elmUsername;
 //@FindBy (xpath="//input[@id='txtUsername' or @id='txtUsername']") WebElement elmUsername;
@@ -44,7 +51,8 @@ public DashboardPage successLogin() throws IOException, InterruptedException
 //  //  js.executeScript("arguments[0].click();", elmSubmit);
 ////	js.executeScript("window.scrollTo(0,document.body.scrollHeight)");
 //	js.executeScript("arguments[0].scrollIntoView(true);", elmSubmit);
-//	js.executeScript("history.go(0)");
+//	 js.executeScript("window.scrollBy(0,600)");	
+//	js.executeScript("history.go(0)"); //page will be refresh.
 //	js.executeScript("arguments[0].style.border='3px solid red'", elmSubmit);
 //
 //
@@ -65,13 +73,14 @@ public DashboardPage successLogin() throws IOException, InterruptedException
 //    File src = ((TakesScreenshot) WebDriverFactory.getdr()).getScreenshotAs(OutputType.FILE);
 //	FileUtils.copyFile(src, new File("C:\\Users\\User\\eclipse-workspace\\YtelCotactCenter\\src\\test\\java\\com\\ycc\\test\\element.png"));
 
+	
 	elmUsername.sendKeys("kiran@ytel.co.in");
 	elmPassword.sendKeys("BALAji@0321");
 	elmCheckbox.click();
 	elmSubmit.click();
-	
- 
 	return new DashboardPage().isDashboardPageLoaded();
+ 
+//	return new DashboardPage().isDashboardPageLoaded();
 	
 }
 
