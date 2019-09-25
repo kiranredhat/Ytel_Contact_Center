@@ -77,7 +77,8 @@ public DashboardPage successLogin() throws IOException, InterruptedException
 	elmUsername.sendKeys("kiran@ytel.co.in");
 	elmPassword.sendKeys("BALAji@0321");
 	elmCheckbox.click();
-	elmSubmit.click();
+//	elmSubmit.click();
+	elmSubmit.getCssValue("font-size");
 	return new DashboardPage().isDashboardPageLoaded();
  
 //	return new DashboardPage().isDashboardPageLoaded();
